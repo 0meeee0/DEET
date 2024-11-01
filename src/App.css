@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  /* width: 18%; */
+  margin-left: 25px;
+  gap: 10px;
+}
+body {
+  background-color: #1e201e;
+}
+.main-container {
+  display: flex;
+  gap: 30px;
+  /* justify-content: space-between; */
+}
+
+.main-body {
+  height: 90vh;
+  width: 75vw;
+  background-color: rgb(124, 121, 121);
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/01/18/38/background-1789175_1280.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.my-msg,
+.sender-msg {
+  max-width: 60%;
+  min-width: 50px;
+  padding: 10px;
+  border-radius: 15px;
+  color: rgb(74, 72, 72);
+  outline: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  font-size: 1.3rem;
+}
+
+.my-msg {
+  background-color: white;
+  align-self: flex-end;
+  text-align: right;
+  outline: none;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+.sender-msg {
+  background-color: white;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.profile-img {
+  width: 50px;
+  border-radius: 50%;
+  /* display: block; */
+}
+.sum {
+  display: flex;
+  align-items: start;
+  /* width: 18%; */
+  gap: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.username {
+  margin: 5px 0px;
+}
+
+.profile-img-container {
+  position: relative;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.isOnline {
+  width: 12px;
+  height: 12px;
+  background-color: #00ff09;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2px;
+  left: 35px;
+  border: 2px solid #1e201e;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.status {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.more-settings {
+  font-size: 2.2rem;
+  color: white;
+  /* margin-left: 50px; */
+  display: flex;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.switch-chat {
+  position: relative;
+}
+
+.links-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+.cntr {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.switch-chat {
+  width: 90%;
+}
+.switch-chat a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.switch-chat a.active {
+  color: #00ff09;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  background-color: #00ff09;
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+.searchU {
+  /* width: 80%; */
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #505550;
+  border: none;
+  color: white;
+  margin: 10px auto;
+  font-size: 0.9rem;
+  outline: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.searchU::placeholder {
+  color: #c2c2c2;
+  font-size: 0.85rem;
+}
+
+.friends {
+  background-color: #5a5a5a;
+  margin: 10px;
+  border-radius: 50px;
+}
+
+.fr:hover {
+  background-color: #697565;
+}
+
+.cntrchat {
+  margin-left: 15px;
+}
+
+.bot {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.add-friend {
+  border: #5a5a5a solid 3px;
+  padding: 20px 60px;
+  color: #5a5a5a;
+  font-weight: 900;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.request {
+  /* border: #5a5a5a solid 3px; */
+  padding: 20px 60px;
+  color: white;
+  background-color: #5a5a5a;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.type-bar {
+  width: 70%;
+  background-color: #f2f2f2;
+  padding: 20px 20px;
+  color: black;
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  margin-left: 16px;
+  outline: none;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+.jam3{
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 50px;
+}
