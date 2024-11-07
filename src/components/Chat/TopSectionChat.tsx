@@ -2,7 +2,8 @@ import React from 'react'
 
 export default function TopSectionChat() {
   return (
-    <div className="jam3">
+    // jam3
+    <div className="w-3/5 mx-auto bg-white rounded-full shadow-md">
       <div className="sum">
         <div className="profile-img-container">
           <img

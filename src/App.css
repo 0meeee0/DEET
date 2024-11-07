@@ -25,10 +25,11 @@ body {
 }
 
 .main-body {
-  height: 90vh;
+  height: 94vh;
   width: 75vw;
   background-color: rgb(124, 121, 121);
-  background-image: url("https://cdn.pixabay.com/photo/2016/11/01/18/38/background-1789175_1280.png");
+  /* background-image: url("https://wallpapercave.com/wp/wp4577913.jpg"); */
+  /* background-image: url("https://endastore.com/wp-content/uploads/2023/05/Obama-Obamium-shirt_5_white.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 40px;

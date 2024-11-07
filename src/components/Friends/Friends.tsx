@@ -3,8 +3,8 @@ import React from "react";
 export default function Friends() {
   return (
     <div className="">
-      <div className="cntrchat pb-2">Chat</div>
-      <div className="bg-gray-700 rounded-xl w-60 fr my-2">
+      <div className="cntrchat pb-2 ">Chat</div>
+      <div className="bg-gray-700 rounded-full w-60 fr my-2 shadow-lg">
         <div className="sum ">
           <div className="profile-img-container">
             <img

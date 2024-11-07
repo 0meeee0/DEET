@@ -1,13 +1,13 @@
 import { useState } from "react";
 import "./App.css";
-import Body from "./components/Body";
-import Friends from "./components/Friends";
-import Profile from "./components/Profile";
-import SearchUsers from "./components/SearchUsers";
-import SwitchChat from "./components/SwitchChat";
-import Groups from "./components/Groups";
-import AddFriend from "./components/AddFriend";
-import FriendRequest from "./components/FriendRequest";
+import Body from "./components/Chat/Body";
+import Friends from "./components/Friends/Friends";
+import Profile from "./components/Profile/Profile";
+import SearchUsers from "./components/Search/SearchUsers";
+import SwitchChat from "./components/Chat/SwitchChat";
+import Groups from "./components/Groups/Groups";
+import AddFriend from "./components/Friends/AddFriend";
+import FriendRequest from "./components/Friends/FriendRequest";
 
 function App() {
   const [activeLink, setActiveLink] = useState("People");
