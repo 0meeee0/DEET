@@ -8,6 +8,7 @@ import SwitchChat from "./components/Chat/SwitchChat";
 import Groups from "./components/Groups/Groups";
 import AddFriend from "./components/Friends/AddFriend";
 import FriendRequest from "./components/Friends/FriendRequest";
+import SideProfile from "./components/Profile/SideProfile";
 
 function App() {
   const [activeLink, setActiveLink] = useState("People");
@@ -26,6 +27,7 @@ function App() {
           </div>
         </div>
         <Body />
+        <SideProfile/>
       </div>
     </>
   );
