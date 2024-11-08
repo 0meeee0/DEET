@@ -16,8 +16,9 @@
   gap: 10px;
 }
 body {
-  background-color: #1e201e;
+  background: linear-gradient(to bottom, #090c14, rgba(42, 66, 110, 0.2));
 }
+
 .main-container {
   display: flex;
   gap: 30px;
@@ -29,6 +30,7 @@ body {
   width: 75vw;
   background-color: rgb(124, 121, 121);
   /* background-image: url("https://wallpapercave.com/wp/wp4577913.jpg"); */
+  background-image: url("https://pbs.twimg.com/media/Ga0cw49aUAAJFlc?format=jpg&name=4096x4096");
   /* background-image: url("https://endastore.com/wp-content/uploads/2023/05/Obama-Obamium-shirt_5_white.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
@@ -119,6 +121,10 @@ body {
   font-size: 0.8rem;
   color: gray;
 }
+.last-msg{
+  font-size: 0.8rem;
+  color: #cfd7ee;
+}
 
 .more-settings {
   font-size: 2.2rem;
@@ -169,7 +175,7 @@ body {
   /* width: 80%; */
   padding: 10px 20px;
   border-radius: 50px;
-  background-color: #505550;
+  background-color: #4c4f56;
   border: none;
   color: white;
   margin: 10px auto;
@@ -184,13 +190,13 @@ body {
 }
 
 .friends {
-  background-color: #5a5a5a;
+  background-color: #5d667e;
   margin: 10px;
   border-radius: 50px;
 }
 
 .fr:hover {
-  background-color: #697565;
+  background-color: rgba(179, 193, 236, 0.5);
 }
 
 .cntrchat {
@@ -205,9 +211,10 @@ body {
   gap: 20px;
 }
 .add-friend {
-  border: #5a5a5a solid 3px;
+  border: 3px solid transparent;
+  border-image: linear-gradient(to right, #5d667e, #cfd7ee) 1;
   padding: 20px 60px;
-  color: #5a5a5a;
+  color: #5d667e;
   font-weight: 900;
   border-radius: 30px;
   cursor: pointer;
@@ -215,8 +222,8 @@ body {
 .request {
   /* border: #5a5a5a solid 3px; */
   padding: 20px 60px;
-  color: white;
-  background-color: #5a5a5a;
+  color: #090c14;
+  background: linear-gradient(to right, #5d667e, #cfd7ee);
   font-weight: 900;
   display: flex;
   justify-content: center;
@@ -240,7 +247,7 @@ body {
   outline: none;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
 }
-.jam3{
+.jam3 {
   width: 100%;
   background-color: rgb(255, 255, 255);
   position: relative;

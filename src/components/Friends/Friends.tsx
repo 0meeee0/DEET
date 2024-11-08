@@ -16,7 +16,7 @@ export default function Friends() {
           </div>
           <div className="profile-info">
             <h3 className="username">Nouamane</h3>
-            <span className="status">msg</span>
+            <span className="last-msg">msg</span>
           </div>
         </div>
       </div>
