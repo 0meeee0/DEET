@@ -1,13 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
 .profile-container {
   display: flex;
   flex-direction: column;
@@ -31,7 +21,6 @@ body {
   background-color: rgb(124, 121, 121);
   /* background-image: url("https://wallpapercave.com/wp/wp4577913.jpg"); */
   background-image: url("https://pbs.twimg.com/media/Ga0cw49aUAAJFlc?format=jpg&name=4096x4096");
-  /* background-image: url("https://endastore.com/wp-content/uploads/2023/05/Obama-Obamium-shirt_5_white.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 40px;
