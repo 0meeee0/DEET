@@ -18,52 +18,52 @@ function Login({ setIsAuthenticated }) {
           />
         </div>
 
-        <div className="flex gap-2 justify-center bg-black mt-10">
-          <div
-            className={`p-2 cursor-pointer ${
-              isLogin ? "bg-gray-300" : "bg-gray-400"
-            }`}
-            onClick={() => setIsLogin(true)}
-          >
-            Login
+        <div className="flex flex-col items-center text-center mx-5">
+          <div className="relative flex gap-2 justify-center rounded-lg bg-black mt-10 w-full max-w-sm">
+            <div
+              className={`p-2 cursor-pointer w-1/2 z-10 text-white transition duration-300 ${
+                isLogin ? "text-gray-100" : "text-gray-500"
+              }`}
+              onClick={() => setIsLogin(true)}
+            >
+              Login
+            </div>
+            <div
+              className={`p-2 cursor-pointer w-1/2 z-10 text-white transition duration-300 ${
+                !isLogin ? "text-gray-100" : "text-gray-500"
+              }`}
+              onClick={() => setIsLogin(false)}
+            >
+              Register
+            </div>
+            <div
+              className={`absolute left-0 bottom-0 h-10 w-1/2 z-1 rounded-lg bg-[#455B83]/[.80] transition-transform duration-300 ease-in-out ${
+                isLogin ? "translate-x-0" : "translate-x-full"
+              }`}
+            />
           </div>
-          <div
-            className={`p-2 cursor-pointer ${
-              !isLogin ? "bg-gray-300" : "bg-gray-400"
-            }`}
-            onClick={() => setIsLogin(false)}
-          >
-            Register
-          </div>
-        </div>
 
-        <form
-          className="flex flex-col gap-4 mt-8"
-          onSubmit={(e) => {
-            e.preventDefault();
-              handleLogin();
-
-          }}
-        >
-          <input
-            type="text"
-            placeholder="Email"
-            className="p-2 rounded-lg border border-gray-300 focus:outline-none"
-          />
-          {!isLogin && (
+          <form className="flex flex-col gap-4 mt-8 w-full max-w-sm">
             <input
-              type="name"
-              placeholder="name"
+              type="text"
+              placeholder="Email"
               className="p-2 rounded-lg border border-gray-300 focus:outline-none"
             />
-          )}
-          <button
-            type="submit"
-            className="py-5 px-6 mx-auto bg-[#cfd7ee]/[.20] text-white rounded-lg hover:bg-[#cfd7ee]/[.50]"
-          >
-            →
-          </button>
-        </form>
+            {isLogin ? null : (
+              <input
+                type="name"
+                placeholder="Name"
+                className="p-2 rounded-lg border border-gray-300 focus:outline-none"
+              />
+            )}
+            <button
+              type="submit"
+              className="py-5 px-6 mx-auto bg-[#cfd7ee]/[.20] text-white rounded-lg hover:bg-[#cfd7ee]/[.50]"
+            >
+              →
+            </button>
+          </form>
+        </div>
       </div>
 
       <div className="mt-10">
