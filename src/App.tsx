@@ -9,27 +9,33 @@ import Groups from "./components/Groups/Groups";
 import AddFriend from "./components/Friends/AddFriend";
 import FriendRequest from "./components/Friends/FriendRequest";
 import SideProfile from "./components/Profile/SideProfile";
+import Login from "./components/Auth/Login";
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [activeLink, setActiveLink] = useState("People");
 
   return (
-    <>
-      <div className="main-container">
-        <div className="profile-container">
-          <Profile />
-          <SwitchChat activeLink={activeLink} setActiveLink={setActiveLink} />
-          <SearchUsers />
-          {activeLink === "People"? <Friends />: <Groups/>}
-          <div className="bot">
-            <FriendRequest/>
-          <AddFriend/>
+    <div className="main-container">
+      {!isAuthenticated ? (
+        <Login setIsAuthenticated={setIsAuthenticated} />
+      ) : (
+        <>
+          <div className="profile-container">
+            <Profile />
+            <SwitchChat activeLink={activeLink} setActiveLink={setActiveLink} />
+            <SearchUsers />
+            {activeLink === "People" ? <Friends /> : <Groups />}
+            <div className="bot">
+              <FriendRequest />
+              <AddFriend />
+            </div>
           </div>
-        </div>
-        <Body />
-        <SideProfile/>
-      </div>
-    </>
+          <Body />
+          <SideProfile />
+        </>
+      )}
+    </div>
   );
 }
 

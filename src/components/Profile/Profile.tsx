@@ -43,18 +43,18 @@ export default function Profile() {
           role="dialog"
           aria-labelledby="hs-custom-backdrop-label"
         >
-          <div className="flex flex-col isolate aspect-video w-96 rounded-xl bg-[rgba(42, 66, 110)]/20 shadow-lg ring-1 ring-black/5 border  pointer-events-auto sm:max-w-lg sm:w-full">
-            <div className="flex justify-between items-center py-3 px-4 border-b">
+          <div className="flex flex-col isolate aspect-video w-96 rounded-xl bg-[#090c14]/40 backdrop-blur-md shadow-xl ring-1 ring-white/10 border border-white/20 pointer-events-auto sm:max-w-lg sm:w-full">
+            <div className="flex justify-between items-center py-3 px-4 border-b border-[#cfd7ee]/[.20]">
               <h3
                 id="hs-custom-backdrop-label"
-                className="font-bold text-gray-800"
+                className="font-bold text-[#cfd7ee]"
               >
                 Profile Settings
               </h3>
               <button
                 type="button"
                 onClick={handleModalToggle}
-                className="inline-flex justify-center items-center rounded-full bg-gray-100 text-gray-800 hover:bg-gray-200 p-2"
+                className="inline-flex justify-center items-center rounded-full bg-[#cfd7ee] text-gray-800 hover:bg-gray-200 p-2"
                 aria-label="Close"
               >
                 <svg
@@ -80,7 +80,7 @@ export default function Profile() {
                 <input type="file" accept="image/*" className="mt-2" />
               </div>
               <div className="mt-4">
-                <label className="block text-sm font-medium text-gray-700">
+                <label className="block  text-sm font-medium text-[#cfd7ee]">
                   Name
                 </label>
                 <input
@@ -91,25 +91,16 @@ export default function Profile() {
                 />
               </div>
               <div className="mt-4">
-                <label className="block text-sm font-medium text-gray-700">
+                <label className="block text-sm font-medium text-[#cfd7ee]">
                   Description
                 </label>
                 <textarea className="mt-1 block w-full px-3 py-2 border rounded-md" />
               </div>
-              <div className="mt-4">
-                <label className="block text-sm font-medium text-gray-700">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  className="mt-1 block w-full px-3 py-2 border rounded-md"
-                />
-              </div>
             </div>
-            <div className="flex justify-end items-center gap-x-2 py-3 px-4 border-t">
+            <div className="flex justify-between items-center gap-x-2 py-3 px-4 border-t border-[#cfd7ee]/[.20]">
               <button
                 type="button"
-                className="py-2 px-3 text-sm font-medium rounded-lg border bg-white text-gray-800 hover:bg-gray-50"
+                className="py-2 px-3 text-sm font-medium rounded-lg border bg-red-500 text-[#cfd7ee] hover:bg-red-600"
               >
                 Logout
               </button>
