@@ -9,7 +9,7 @@ function Login({ setIsAuthenticated }) {
 
   return (
     <>
-      <div className="profile-container flex flex-col text-center mx-5">
+      <div className="profile-containe flex flex-col text-center mx-5">
         <div className="flex justify-center mt-10">
           <img
             className="w-28 rounded-3xl"
@@ -43,10 +43,17 @@ function Login({ setIsAuthenticated }) {
             />
           </div>
 
-          <form className="flex flex-col gap-4 mt-8 w-full max-w-sm">
+          <form
+            className="flex flex-col gap-4 mt-8 w-full max-w-sm"
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleLogin();
+            }}
+          >
             <input
-              type="text"
+              type="email"
               placeholder="Email"
+              required
               className="p-2 rounded-lg border border-gray-300 focus:outline-none"
             />
             {isLogin ? null : (
@@ -54,6 +61,7 @@ function Login({ setIsAuthenticated }) {
                 type="name"
                 placeholder="Name"
                 className="p-2 rounded-lg border border-gray-300 focus:outline-none"
+                required
               />
             )}
             <button
@@ -66,7 +74,7 @@ function Login({ setIsAuthenticated }) {
         </div>
       </div>
 
-      <div className="mt-10">
+      <div className="">
         <img
           className="w-screen"
           src="https://as2.ftcdn.net/v2/jpg/05/26/52/71/1000_F_526527151_xsfyOxjCQwASvCNVFpgNM4KyIuqApcnb.jpg"
