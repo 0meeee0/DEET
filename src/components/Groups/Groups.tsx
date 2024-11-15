@@ -3,7 +3,7 @@ import React from "react";
 const groups = ["JS Pirates", "Silk Road"];
 export default function Groups() {
   return (
-    <div className="">
+    <div className="overflow-y-auto h-64">
       {groups.map((index: any): any => (
         <div
           key={index}

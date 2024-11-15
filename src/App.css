@@ -20,7 +20,7 @@ body {
   width: 57vw;
   background-color: rgb(124, 121, 121);
   /* background-image: url("https://wallpapercave.com/wp/wp4577913.jpg"); */
-  background-image: url("https://pbs.twimg.com/media/Ga0cw49aUAAJFlc?format=jpg&name=4096x4096");
+  /* background-image: url("https://pbs.twimg.com/media/Ga0cw49aUAAJFlc?format=jpg&name=4096x4096"); */
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 40px;
@@ -242,4 +242,28 @@ body {
   position: relative;
   margin-bottom: 30px;
   border-radius: 50px;
+}
+
+.call-popup {
+  background: rgb(31, 31, 66);
+  z-index: 10;
+  animation: jiggle 0.5s ease-in-out infinite;
+}
+
+@keyframes jiggle {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

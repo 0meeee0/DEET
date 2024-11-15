@@ -12,7 +12,7 @@ function Login({ setIsAuthenticated }) {
       <div className="profile-containe flex flex-col text-center mx-5">
         <div className="flex justify-center mt-10">
           <img
-            className="w-28 rounded-3xl"
+            className="w-28 rounded-3xl animate__animated animate__bounce"
             src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F164517ee-d738-42b1-b9ce-2903a24e18d9.png"
             alt="Profile"
           />
@@ -74,7 +74,7 @@ function Login({ setIsAuthenticated }) {
         </div>
       </div>
 
-      <div className="">
+      <div className="animate__animated animate__fadeInRight">
         <img
           className="w-screen"
           src="https://as2.ftcdn.net/v2/jpg/05/26/52/71/1000_F_526527151_xsfyOxjCQwASvCNVFpgNM4KyIuqApcnb.jpg"
