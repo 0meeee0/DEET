@@ -19,7 +19,13 @@ export default function TopSectionChat() {
       </div>
       <div className="icon-container flex space-x-4 pr-4">
         <PhoneIcon className="h-6 w-6 text-gray-500 cursor-pointer hover:text-blue-500" />
-        <VideoCameraIcon className="h-6 w-6 text-gray-500 cursor-pointer hover:text-blue-500" />
+        <VideoCameraIcon
+          onClick={(event) => {
+            event.preventDefault();
+            window.open("", "_blank", "popup");
+          }}
+          className="h-6 w-6 text-gray-500 cursor-pointer hover:text-blue-500"
+        />
       </div>
     </div>
   );
