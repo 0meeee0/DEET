@@ -10,6 +10,7 @@ import AddFriend from "./components/Friends/AddFriend";
 import FriendRequest from "./components/Friends/FriendRequest";
 import SideProfile from "./components/Profile/SideProfile";
 import Login from "./components/Auth/Login";
+import AddGroup from "./components/Groups/AddGroup";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -27,8 +28,14 @@ function App() {
             <SearchUsers />
             {activeLink === "People" ? <Friends /> : <Groups />}
             <div className="bot">
-              <FriendRequest />
-              <AddFriend />
+              {activeLink === "People" ? (
+                <>
+                  <FriendRequest />
+                  <AddFriend />
+                </>
+              ) : (
+                <AddGroup />
+              )}
             </div>
           </div>
           <Body />
