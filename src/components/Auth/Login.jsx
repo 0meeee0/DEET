@@ -2,9 +2,25 @@ import React, { useState } from "react";
 
 function Login({ setIsAuthenticated }) {
   const [isLogin, setIsLogin] = useState(true);
+  const  [email, setEmail] = useState('');
+  const  handleLogin = async () => {
+    const user = await fetch('http://localhost:3000/auth/log', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json', // Inform server about JSON payload
+      },
+      body: JSON.stringify({ email }), // Convert email to JSON
+    });
+    if (user.ok) {
+      const userData = await user.json();
+      // console.log(userData.user);
+      localStorage.setItem('user', JSON.stringify(userData.user));
+      setIsAuthenticated(true);
+    } else {
+      console.log('User not found!');
+    }
 
-  const handleLogin = () => {
-    setIsAuthenticated(true);
+
   };
 
   return (
@@ -47,12 +63,15 @@ function Login({ setIsAuthenticated }) {
             className="flex flex-col gap-4 mt-8 w-full max-w-sm"
             onSubmit={(e) => {
               e.preventDefault();
+              console.log(email + "is the email printed");
               handleLogin();
             }}
           >
             <input
               type="email"
               placeholder="Email"
+              value={email}
+              onChange={(e)=>setEmail(e.target.value)}
               required
               className="p-2 rounded-lg border border-gray-300 focus:outline-none"
             />
