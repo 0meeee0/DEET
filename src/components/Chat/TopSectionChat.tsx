@@ -1,4 +1,5 @@
 import { PhoneIcon, VideoCameraIcon } from "@heroicons/react/24/solid";
+import Groups from "../Groups/Groups";
 
 export default function TopSectionChat() {
   return (
@@ -22,7 +23,7 @@ export default function TopSectionChat() {
         <VideoCameraIcon
           onClick={(event) => {
             event.preventDefault();
-            window.open("", "_blank", "popup");
+            window.open('/video-call', "_blank", "popup");
           }}
           className="h-6 w-6 text-gray-500 cursor-pointer hover:text-blue-500"
         />
